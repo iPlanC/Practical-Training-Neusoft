@@ -4,7 +4,9 @@
  * @LastEditTime: 2020-08-12 15:21:13
  * @FilePath: /Practical-Training-Neusoft/8.12/5.c
  */
+
 #include <stdio.h>
+
 #define SIZE 20
 
 struct names {

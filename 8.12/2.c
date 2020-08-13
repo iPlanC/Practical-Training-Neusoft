@@ -4,6 +4,7 @@
  * @LastEditTime: 2020-08-12 12:21:17
  * @FilePath: \Practical-Training-Neusoft\8.12\2.c
  */
+
 #include <stdio.h>
 
 #define MAXTITLE 81

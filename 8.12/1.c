@@ -1,12 +1,14 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-12 08:53:33
- * @LastEditTime: 2020-08-12 09:26:21
+ * @LastEditTime: 2020-08-13 16:02:42
  * @FilePath: /Practical-Training-Neusoft/8.12/1.c
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define SIZE 10
 
 int main() {

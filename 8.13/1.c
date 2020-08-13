@@ -1,10 +1,12 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-13 09:04:56
- * @LastEditTime: 2020-08-13 09:17:10
+ * @LastEditTime: 2020-08-13 16:03:24
  * @FilePath: /Practical-Training-Neusoft/8.13/1.c
  */
+
 #include <stdio.h>
+
 #define SIZE 10
 
 struct scores {

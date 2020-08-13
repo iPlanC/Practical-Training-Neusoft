@@ -1,9 +1,10 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-13 11:14:50
- * @LastEditTime: 2020-08-13 11:33:21
- * @FilePath: /Practical-Training-Neusoft/8.13/5.c
+ * @LastEditTime: 2020-08-13 16:03:54
+ * @FilePath: /Practical-Training-Neusoft/8.13/6.c
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -4,7 +4,9 @@
  * @LastEditTime: 2020-08-13 09:23:58
  * @FilePath: /Practical-Training-Neusoft/8.13/2.c
  */
+
 #include <stdio.h>
+
 #define SIZE 10
 
 struct scores {

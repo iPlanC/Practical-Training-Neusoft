@@ -1,11 +1,13 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-13 09:40:19
- * @LastEditTime: 2020-08-13 10:20:35
- * @FilePath: \Practical-Training-Neusoft\8.13\4.c
+ * @LastEditTime: 2020-08-13 16:03:44
+ * @FilePath: /Practical-Training-Neusoft/8.13/4.c
  */
+
 #include <stdio.h>
 #include <string.h>
+
 #define SIZE 30
 
 struct NAME {

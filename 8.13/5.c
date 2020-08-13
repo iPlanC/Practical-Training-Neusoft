@@ -4,8 +4,10 @@
  * @LastEditTime: 2020-08-13 11:35:59
  * @FilePath: /Practical-Training-Neusoft/8.13/5.c
  */
+
 #include <stdio.h>
 #include <string.h>
+
 #define SIZE 30
 
 struct NAME {

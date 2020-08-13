@@ -1,10 +1,12 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-12 14:13:07
- * @LastEditTime: 2020-08-12 15:00:44
+ * @LastEditTime: 2020-08-13 16:03:01
  * @FilePath: /Practical-Training-Neusoft/8.12/4.c
  */
+
 #include <stdio.h>
+
 #define SIZE 20
 
 struct names {
