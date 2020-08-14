@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-14 15:46:25
- * @LastEditTime: 2020-08-14 16:00:13
+ * @LastEditTime: 2020-08-14 16:34:36
  * @FilePath: /Practical-Training-Neusoft/8.14/3.c
  */
 
@@ -30,7 +30,7 @@ char *dec_to_binstr(int num, char *pt) {
 	return pt;
 }
 
-int main(int argc,char** argv) {
+int main(int argc,char *argv[]) {
     char binstr[33] = {'\0'};
     char binstr1[33] = {'\0'};
     char binstr2[33] = {'\0'};
