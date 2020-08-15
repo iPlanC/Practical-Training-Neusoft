@@ -10,27 +10,27 @@
 #define SIZE 20
 
 struct names {
-    char first[SIZE];
-    char last[SIZE];
+	char first[SIZE];
+	char last[SIZE];
 };
 
 struct person {
-    struct names name;
-    char favfood[SIZE];
-    char job[SIZE];
-    float income;
+	struct names name;
+	char favfood[SIZE];
+	char job[SIZE];
+	float income;
 };
 
 int main() {
-    struct person fellow = {
-        {"Micheal", "Bay"},
-        "salad",
-        "director",
-        2500
-    };
-    printf("name is :%s %s\n", fellow.name.first, fellow.name.last);
-    printf("favorite food is :%s", fellow.favfood);
-    printf("job is :%s", fellow.job);
-    printf("income is :$%d", fellow.income);
-    return 0;
+	struct person fellow = {
+		{"Micheal", "Bay"},
+		"salad",
+		"director",
+		2500
+	};
+	printf("name is :%s %s\n", fellow.name.first, fellow.name.last);
+	printf("favorite food is :%s", fellow.favfood);
+	printf("job is :%s", fellow.job);
+	printf("income is :$%d", fellow.income);
+	return 0;
 }

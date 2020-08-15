@@ -10,24 +10,24 @@
 #define SIZE 10
 
 struct scores {
-    char name[SIZE];
-    double Chinese;
-    double Math;
-    double English;
+	char name[SIZE];
+	double Chinese;
+	double Math;
+	double English;
 };
 
 double sum(const struct scores *fellow) {
-    return fellow->Chinese + fellow->Math + fellow->English;
+	return fellow->Chinese + fellow->Math + fellow->English;
 }
 
 int main() {
-    struct scores fellow = {
-        "Jerry",
-        120,
-        115,
-        118
-    };
-    printf("%.2lf\n", sum(&fellow));
+	struct scores fellow = {
+		"Jerry",
+		120,
+		115,
+		118
+	};
+	printf("%.2lf\n", sum(&fellow));
 
-    return 0;
+	return 0;
 }

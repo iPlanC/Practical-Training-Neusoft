@@ -10,7 +10,7 @@
 typedef double price;
 
 int main() {
-    price a = 10.56;
-    printf ("a = %.2lf\n", a);
-    return 0;
+	price a = 10.56;
+	printf ("a = %.2lf\n", a);
+	return 0;
 }
