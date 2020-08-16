@@ -1,16 +1,15 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-12 09:30:27
- * @LastEditTime: 2020-08-16 15:06:31
- * @FilePath: /Practical-Training-Neusoft/8.5/1.c
+ * @LastEditTime: 2020-08-16 15:16:36
+ * @FilePath: /Practical-Training-Neusoft/8.5/1_2.c
  */
 
 #include <stdio.h>
 
 int main() {
 	char ch;
-	ch = getchar();
-	while (ch != '\n') {
+	while ((ch = getchar()) != '\n') {
 		if (ch == ' ') {
 			putchar(ch);
 		}
