@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-17 07:52:03
- * @LastEditTime: 2020-08-17 10:04:20
+ * @LastEditTime: 2020-08-17 10:05:29
  * @FilePath: /Practical-Training-Neusoft/8.17/2.c
  */
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	if ((sourceFile = fopen(argv[1], "r")) == NULL) {
 		printf("can't open source file: %s\n", argv[1]);
 	}
-	if ((outputFile = fopen(argv[2], "r")) == NULL) {
+	if ((outputFile = fopen(argv[2], "w")) == NULL) {
 		printf("can't open output file: %s\n", argv[2]);
 	}
 
