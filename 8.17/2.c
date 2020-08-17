@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-17 07:52:03
- * @LastEditTime: 2020-08-17 10:05:29
+ * @LastEditTime: 2020-08-17 10:05:58
  * @FilePath: /Practical-Training-Neusoft/8.17/2.c
  */
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
 	char ch;
 	while ((ch = getc(sourceFile)) != EOF) {
-		printf("%d\n", putc(ToUpper(ch), outputFile));
+		putc(ToUpper(ch), outputFile);
 	}
 	fclose(sourceFile);
 	fclose(outputFile);
