@@ -1,8 +1,8 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-18 09:48:08
- * @LastEditTime: 2020-08-18 11:13:50
- * @FilePath: /Practical-Training-Neusoft/8.18/2.c
+ * @LastEditTime: 2020-08-18 11:20:02
+ * @FilePath: /Practical-Training-Neusoft/8.18/3.c
  */
 
 #include <stdio.h>
@@ -27,11 +27,27 @@ int main(int argc, char *argv[]) {
 	rewind(file1);
 	rewind(file2);
 
+	int i = 0;
+	int j = 0;
 	char str1[SIZE] = {'\0'};
 	char str2[SIZE] = {'\0'};
 	while (1) {
-		if (fgets(str1, SIZE, file1) != NULL) fputs(str1, stdout);
-		if (fgets(str2, SIZE, file2) != NULL) fputs(str2, stdout);
+		if (fgets(str1, SIZE, file1) != NULL) {
+			i = 0;
+			while (str1[i] != '\n') {
+				putc(str1[i], stdout);
+				i++;
+			}
+		}
+		putc(' ', stdout);
+		if (fgets(str2, SIZE, file2) != NULL) {
+			j = 0;
+			while (str2[j] != '\n') {
+				putc(str2[j], stdout);
+				j++;
+			}
+		}
+		putc('\n', stdout);
 		if (feof(file1) && feof(file2)) break;
 	}
 	fclose(file1);
