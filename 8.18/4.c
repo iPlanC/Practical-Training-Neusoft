@@ -1,15 +1,13 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-18 14:11:15
- * @LastEditTime: 2020-08-18 14:32:02
+ * @LastEditTime: 2020-08-18 14:35:20
  * @FilePath: /Practical-Training-Neusoft/8.18/4.c
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define SIZE 81
 
 int Palindrome(char *str) {
 	int i = 0;
