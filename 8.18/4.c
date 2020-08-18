@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-18 11:36:45
- * @LastEditTime: 2020-08-18 11:49:36
+ * @LastEditTime: 2020-08-18 12:01:56
  * @FilePath: /Practical-Training-Neusoft/8.18/4.c
  */
 
@@ -29,6 +29,7 @@ int main(int argc, char *argv[]) {
 		if (strstr(str, argv[1]) != NULL) count++;
 		if (feof(file)) break;
 	}
+	fclose(file);
 
 	printf("file: %s has %d lines includes string: %s\n", argv[2], count, argv[1]);
 	return 0;
