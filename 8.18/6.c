@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-18 16:35:53
- * @LastEditTime: 2020-08-18 16:51:03
+ * @LastEditTime: 2020-08-18 16:52:57
  * @FilePath: /Practical-Training-Neusoft/8.18/6.c
  */
 
@@ -23,7 +23,7 @@ int main() {
 			}
 		}
 		if (flag == 0) {
-			printf("number: %d is a prime\n", number);
+			printf("number: %d, is a prime\n", number);
 		}
 		else {
 			flag = 0;
