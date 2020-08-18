@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-18 09:48:08
- * @LastEditTime: 2020-08-18 11:20:02
+ * @LastEditTime: 2020-08-18 11:33:55
  * @FilePath: /Practical-Training-Neusoft/8.18/3.c
  */
 
@@ -35,16 +35,14 @@ int main(int argc, char *argv[]) {
 		if (fgets(str1, SIZE, file1) != NULL) {
 			i = 0;
 			while (str1[i] != '\n') {
-				putc(str1[i], stdout);
-				i++;
+				putc(str1[i++], stdout);
 			}
 		}
 		putc(' ', stdout);
 		if (fgets(str2, SIZE, file2) != NULL) {
 			j = 0;
 			while (str2[j] != '\n') {
-				putc(str2[j], stdout);
-				j++;
+				putc(str2[j++], stdout);
 			}
 		}
 		putc('\n', stdout);
