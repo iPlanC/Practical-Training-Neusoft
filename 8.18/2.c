@@ -4,6 +4,7 @@
  * @LastEditTime: 2020-08-18 10:20:38
  * @FilePath: /Practical-Training-Neusoft/8.18/2.c
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 
