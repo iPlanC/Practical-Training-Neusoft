@@ -5,8 +5,6 @@
  * @FilePath: /Practical-Training-Neusoft/8.19/5.c
  */
 
-// 123456789 -> 135792648
-
 #include <stdio.h>
 #include <string.h>
 
