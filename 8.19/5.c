@@ -1,43 +1,50 @@
 /*
  * @Author: PlanC
- * @Date: 2020-08-19 14:41:47
- * @LastEditTime: 2020-08-19 15:30:32
+ * @Date: 2020-08-19 16:31:31
+ * @LastEditTime: 2020-08-19 17:08:34
  * @FilePath: /Practical-Training-Neusoft/8.19/5.c
  */
 
 #include <stdio.h>
 #include <string.h>
 
-#define SIZE 81
+#define SIZE 512
+#define not !
 
-char *decode1(char *code) {
-	
+int head = 0;
+int tail = 0;
+char queue[SIZE];
+
+void enqueue(char c) {
+	queue[tail] = c;
+	tail = (tail + 1) % SIZE;
 }
 
-char *decode2(char *code, char *decode) {
-	int i = 0;
-	int j = 0;
-	int flag = 0;
+char dequeue() {
+	char ch;
+	ch = queue[head];
+	head = (head + 1) % SIZE;
+	return ch;
+}
 
-	for (i = 0; i < strlen(code); i++) flag = flag + code[i] - 48;
-	i = 0;
-	while (flag > 0) {
-		for (i = i % strlen(code); i < strlen(code); i+=2) {
-			if (flag > 0) {
-				decode[j++] = code[i];
-				flag = flag - (code[i] - 48);
-			}
-		}
-	}
-	decode[j] = '\0';
-	return decode;
+int is_empty() {
+	return head == tail;
+}
+
+int is_full() {
+	return head == (tail + 1) % SIZE;
 }
 
 int main() {
-	char code[SIZE];
-	char decode[SIZE];
-	printf("input the string needs to decode\n");
-	while (gets(code) && code[0] != '\n') {
-		printf("the code \"%s\" decoded result is: \"%s\"\n", code, decode2(code, decode));
+	int i = 0;
+
+	printf("input a string:\n");
+	while (gets(queue) && queue[0] != '\n') {
+		tail = strlen(queue);
+		while (not is_empty()) {
+			printf("%c", dequeue());
+			enqueue(dequeue());
+		}
 	}
+	return 0;
 }
