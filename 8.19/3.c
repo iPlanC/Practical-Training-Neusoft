@@ -1,36 +1,33 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-19 10:47:36
- * @LastEditTime: 2020-08-19 11:16:07
+ * @LastEditTime: 2020-08-19 12:01:53
  * @FilePath: /Practical-Training-Neusoft/8.19/3.c
  */
 
 #include <stdio.h>
 
-int rotate(int x, int i) {
-	int j = 0;
-	int highest = 0;
+int rotate(unsigned int x,unsigned int i) {
+	return (x >> (32 - i)) | (x << i);
+}
 
-	for (j = 0; j < i; j++) {
-		highest = 0x8000 & x;
-		x = x << 1;
-		x = x | highest;
+char *dec_to_binstr(int num, char *pt) {
+	int i;
+	for(i = 31; i >=0; i--, num >>= 1) {
+		pt[i] = (num & 1) + '0';
 	}
-	return x;
+	pt[32] = '\0';
+	return pt;
 }
 
 int main() {
-	//printf("rotate: %d\n", rotate(0x0001, 0));// 0x0001 1
-	//printf("rotate: %d\n", rotate(0x0001, 1));// 0x0001 2
-	//printf("rotate: %d\n", rotate(0x0001, 2));// 0x0001 4
-	//printf("rotate: %d\n", rotate(0x0001, 3));// 0x0001 8
-	//printf("rotate: %d\n", rotate(0x0001, 4));// 0x0001 16
-
-	int count = 0;
-	int number = 0;
+	unsigned int count = 0;
+	unsigned int number = 0;
+	char binstr1[33] = {'\0'};
+	char binstr2[33] = {'\0'};
 	printf("input two integers\n");
 	while (scanf("%x %d", &number, &count) == 2) {
-		printf("rotate(%d, %d) = %d\n", number, count, rotate(number, count));
+		printf("rotate(%s, %d) = \n       %s\n", dec_to_binstr(number, binstr2), count, dec_to_binstr(rotate(number, count), binstr1));
 	}
 	return 0;
 }

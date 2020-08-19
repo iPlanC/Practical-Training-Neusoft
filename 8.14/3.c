@@ -1,8 +1,8 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-14 15:46:25
- * @LastEditTime: 2020-08-14 16:41:09
- * @FilePath: \Practical-Training-Neusoft\8.14\3.c
+ * @LastEditTime: 2020-08-19 11:50:32
+ * @FilePath: /Practical-Training-Neusoft/8.14/3.c
  */
 
 #include <math.h>
