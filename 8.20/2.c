@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 11:08:22
- * @LastEditTime: 2020-08-20 11:31:24
+ * @LastEditTime: 2020-08-20 11:46:37
  * @FilePath: /Practical-Training-Neusoft/8.20/2.c
  */
 
@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
 	FILE *fp = NULL;
 	if ((fp = fopen(argv[2], "w")) == NULL) {
 		printf("can't open file \"%s\"", argv[2]);
+		exit(2);
 	}
 	rewind(fp);
 	fputs(argv[1], fp); fclose(fp);
@@ -44,6 +45,7 @@ int main(int argc, char *argv[]) {
 
 	if ((fp = fopen(argv[2], "w")) == NULL) {
 		printf("can't open file \"%s\"", argv[2]);
+		exit(3);
 	}
 	rewind(fp);
 	fputs(result, fp); fclose(fp);
