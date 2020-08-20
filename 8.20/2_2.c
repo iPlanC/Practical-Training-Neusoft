@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 12:05:58
- * @LastEditTime: 2020-08-20 13:24:08
+ * @LastEditTime: 2020-08-20 13:31:14
  * @FilePath: /Practical-Training-Neusoft/8.20/2_2.c
  */
 
@@ -56,19 +56,38 @@ int is_empty() {
 	return head == NULL;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+	if (argc != 3) {
+		printf("Usage: %s <integer> <filename>", argv[0]);
+		exit(1);
+	}
+
+	FILE *fp = NULL;
+	if ((fp = fopen(argv[2], "w")) == NULL) {
+		printf("can't open file \"%s\"", argv[2]);
+		exit(2);
+	}
+	rewind(fp);
+	fputs(argv[1], fp); fclose(fp);
+
 	init();
-	save("652352684971");
+	save(argv[1]);
 	dedup();
 	pt = head;
 
-	printf("source: 652352684971\nresult: ");
+	if ((fp = fopen(argv[2], "w")) == NULL) {
+		printf("can't open file \"%s\"", argv[2]);
+		exit(3);
+	}
+	rewind(fp);
+	printf("source: %s\nresult: ", argv[1]);
 	while (pt->next) {
 		pt = pt->next;
 		printf("%c", pt->context);
+		fputc(pt->context, fp);
 	}
+	fclose(fp);
 	printf("\n");
-	printf("target: 652384971\n");
 
 	return 0;
 }
