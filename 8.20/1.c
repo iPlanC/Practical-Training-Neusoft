@@ -1,11 +1,12 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 08:39:04
- * @LastEditTime: 2020-08-20 11:11:18
- * @FilePath: /Practical-Training-Neusoft/8.20/1.c
+ * @LastEditTime: 2020-08-21 17:04:52
+ * @FilePath: \Practical-Training-Neusoft\8.20\1.c
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int getvalue(int value, int offset) {
