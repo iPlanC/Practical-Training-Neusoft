@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-14 08:19:40
- * @LastEditTime: 2020-08-15 10:32:33
+ * @LastEditTime: 2020-08-21 18:04:41
  * @FilePath: /Practical-Training-Neusoft/8.14/1.c
  */
 
@@ -21,7 +21,7 @@ int Bin2Dec(char *str) {
 int main() {
 	char str[81] = {'\0'};
 	puts("input a binary string:");
-	while (gets(str) && str[0] != '\0') {
+	while (fgets(str, strlen(str), stdin) && str[0] != '\0') {
 		printf("binary \"%s\" to decimal is %d\n", str, Bin2Dec(str));
 		puts("input a binary string:");
 	}

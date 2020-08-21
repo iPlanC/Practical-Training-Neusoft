@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-13 14:05:38
- * @LastEditTime: 2020-08-15 10:32:03
+ * @LastEditTime: 2020-08-21 18:28:45
  * @FilePath: /Practical-Training-Neusoft/8.13/7.c
  */
 
@@ -51,7 +51,7 @@ int main() {
 	char flag = '\0';
 	char str[100] = {'\0'};
 	puts("input a string");
-	while (gets(str) && str[0] != '\0') {
+	while (fgets(str, sizeof(str), stdin) && str[0] != '\0') {
 		puts("Upper or Lower?");
 		scanf("%c", &flag);
 		getchar();

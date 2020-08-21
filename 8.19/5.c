@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-19 16:31:31
- * @LastEditTime: 2020-08-19 17:09:56
+ * @LastEditTime: 2020-08-21 18:29:52
  * @FilePath: /Practical-Training-Neusoft/8.19/5.c
  */
 
@@ -39,7 +39,7 @@ int main() {
 	int i = 0;
 
 	printf("input a string:\n");
-	while (gets(queue) && queue[0] != '\n') {
+	while (fgets(queue, sizeof(queue), stdin) && queue[0] != '\n') {
 		tail = strlen(queue);
 		while (not is_empty()) {
 			printf("%c", dequeue());

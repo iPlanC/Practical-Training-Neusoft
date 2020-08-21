@@ -1,8 +1,8 @@
 /*
  * @Author: 邴哲松老师
  * @Date: 2020-08-12 09:28:33
- * @LastEditTime: 2020-08-12 12:21:17
- * @FilePath: \Practical-Training-Neusoft\8.12\2.c
+ * @LastEditTime: 2020-08-21 18:27:31
+ * @FilePath: /Practical-Training-Neusoft/8.12/2.c
  */
 
 #include <stdio.h>
@@ -24,10 +24,10 @@ int main(void) {
 
 	printf("Please enter the book title:\n");
 
-	while (count < MAXBKS && gets(library[count].title) &&
+	while (count < MAXBKS && fgets(library[count].title, sizeof(library[count].title), stdin) &&
 		   library[count].title[0] != '\0') {
 		printf("Now enter the author:\n");
-		gets(library[count].author);
+		fgets(library[count].author, sizeof(library[count].author), stdin);
 		printf("Now enter the price:\n");
 		scanf("%f", &library[count].price);
 		getchar();

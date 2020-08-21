@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-12 14:13:07
- * @LastEditTime: 2020-08-13 16:03:01
+ * @LastEditTime: 2020-08-21 18:26:11
  * @FilePath: /Practical-Training-Neusoft/8.12/4.c
  */
 
@@ -31,6 +31,6 @@ int main() {
 	printf("name is :%s %s\n", fellow.name.first, fellow.name.last);
 	printf("favorite food is :%s", fellow.favfood);
 	printf("job is :%s", fellow.job);
-	printf("income is :$%d", fellow.income);
+	printf("income is :$%f", fellow.income);
 	return 0;
 }

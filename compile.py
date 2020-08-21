@@ -1,8 +1,8 @@
 '''
 Author: PlanC
 Date: 2020-08-21 16:18:23
-LastEditTime: 2020-08-21 17:54:30
-FilePath: \Practical-Training-Neusoft\compile.py
+LastEditTime: 2020-08-21 18:33:08
+FilePath: /Practical-Training-Neusoft/compile.py
 '''
 
 import os
@@ -37,9 +37,12 @@ if __name__ == '__main__':
         count = count + 1
         print('\rprogress: ' + str(len(list)) + ' / ' + str(count), end = '')
         if platform.system() == 'Windows':
-            print('\tgcc ' + e + '.c -o ' + e + '.exe')
-            os.system('gcc ' + e + '.c -o ' + e + '.exe')
+            if (len(e.split('/')) == 3):
+                print('\tgcc ' + e + '.c -o ' + e + '.exe')
+                os.system('gcc ' + e + '.c -o ' + e + '.exe')
 
         if platform.system() == 'Linux':
-            print('\tgcc ' + e + '.c -o ' + e + '.out')
-            os.system('gcc ' + e + '.c -o ' + e + '.out -lm')
+            if (len(e.split('/')) == 3):
+                print('\tgcc ' + e + '.c -o ' + e + '.out -lm')
+                if os.system('gcc ' + e + '.c -o ' + e + '.out -lm') != 0:
+                    break

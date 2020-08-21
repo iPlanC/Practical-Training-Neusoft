@@ -1,7 +1,7 @@
 /*
  * @Author: 邴哲松老师
  * @Date: 2020-08-19 14:08:24
- * @LastEditTime: 2020-08-19 14:42:22
+ * @LastEditTime: 2020-08-21 18:30:14
  * @FilePath: /Practical-Training-Neusoft/8.19/4.c
  */
 
@@ -19,7 +19,7 @@ int main(void)
 	int n;
 
 	printf("Please enter a string for s2:\n");
-	while(gets(s2) && s2[0] != '\0')
+	while(fgets(s2, sizeof(s2), stdin) && s2[0] != '\0')
 	{
 		printf("Please enter a number you want to copy:\n");
 		scanf("%d", &n);

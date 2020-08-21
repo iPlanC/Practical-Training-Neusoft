@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-17 11:09:37
- * @LastEditTime: 2020-08-17 11:53:54
+ * @LastEditTime: 2020-08-21 18:24:55
  * @FilePath: /Practical-Training-Neusoft/8.17/4.c
  */
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	puts("enter words into the file:");
-	while (gets(context) != NULL && context[0] != '\0') {
+	while (fgets(context, sizeof(context), stdin) && context[0] != '\0') {
 		fprintf(fp, "%s", context);
 	}
 	rewind(fp);

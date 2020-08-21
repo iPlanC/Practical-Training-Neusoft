@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-12 11:27:15
- * @LastEditTime: 2020-08-15 10:31:19
+ * @LastEditTime: 2020-08-21 18:28:15
  * @FilePath: /Practical-Training-Neusoft/8.12/3.c
  */
 
@@ -24,7 +24,7 @@ int main() {
 		{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
 	};
 	puts("input month name in 3-char");
-	while (gets(input) && input[0] != '\0') {
+	while (fgets(input, sizeof(input), stdin) && input[0] != '\0') {
 		for (i = 0; strncmp(input, &month.name[i], 3); i+=3) {
 			totaldays = totaldays + month.days[i / 3];
 			printf("+%d\n", month.days[i / 3]);
