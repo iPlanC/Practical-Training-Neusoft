@@ -39,7 +39,8 @@ if __name__ == '__main__':
         if platform.system() == 'Windows':
             if (len(e.split('/')) == 3):
                 print('\tgcc\t' + e + '.c\t-o\t' + e + '.exe')
-                os.system('gcc ' + e + '.c -o ' + e + '.exe')
+                if os.system('gcc ' + e + '.c -o ' + e + '.exe') != 0
+                    break
 
         if platform.system() == 'Linux':
             if (len(e.split('/')) == 3):
