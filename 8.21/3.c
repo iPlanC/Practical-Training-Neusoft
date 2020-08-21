@@ -11,6 +11,6 @@
 #define aver2(num1, num2) (1 / (((1 / num1) + (1 / num2)) / 2))
 
 int main() {
-    printf("%lf\n", aver2(1.0, 3.0));
-    return 0;
+	printf("%lf\n", aver2(1.0, 3.0));
+	return 0;
 }
