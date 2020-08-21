@@ -1,8 +1,8 @@
 '''
 Author: PlanC
 Date: 2020-08-21 16:18:23
-LastEditTime: 2020-08-21 18:33:08
-FilePath: /Practical-Training-Neusoft/compile.py
+LastEditTime: 2020-08-21 19:11:05
+FilePath: \Practical-Training-Neusoft\compile.py
 '''
 
 import os
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         if platform.system() == 'Windows':
             if (len(e.split('/')) == 3):
                 print('\tgcc\t' + e + '.c\t-o\t' + e + '.exe')
-                if os.system('gcc ' + e + '.c -o ' + e + '.exe') != 0
+                if os.system('gcc ' + e + '.c -o ' + e + '.exe') != 0:
                     break
 
         if platform.system() == 'Linux':
