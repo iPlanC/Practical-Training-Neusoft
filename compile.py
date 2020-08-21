@@ -38,11 +38,11 @@ if __name__ == '__main__':
         print('\rprogress: ' + str(len(list)) + ' / ' + str(count), end = '')
         if platform.system() == 'Windows':
             if (len(e.split('/')) == 3):
-                print('\tgcc ' + e + '.c -o ' + e + '.exe')
+                print('\tgcc\t' + e + '.c\t-o\t' + e + '.exe')
                 os.system('gcc ' + e + '.c -o ' + e + '.exe')
 
         if platform.system() == 'Linux':
             if (len(e.split('/')) == 3):
-                print('\tgcc ' + e + '.c -o ' + e + '.out -lm')
+                print('\tgcc\t' + e + '.c\t-o\t' + e + '.out -lm')
                 if os.system('gcc ' + e + '.c -o ' + e + '.out -lm') != 0:
                     break
